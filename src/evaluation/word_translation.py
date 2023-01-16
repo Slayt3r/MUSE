@@ -10,11 +10,16 @@ import io
 from logging import getLogger
 import numpy as np
 import torch
+import sys
+
+sys.path.append('/kaggle/working/MUSE')
+sys.path.append('/kaggle/working/MUSE/src')
+sys.path.append('/kaggle/working/MUSE/src/evaluation')
 
 from ..utils import get_nn_avg_dist
 
 
-DIC_EVAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'data', 'crosslingual', 'dictionaries')
+DIC_EVAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'crosslingual', 'dictionaries')
 
 
 logger = getLogger()
