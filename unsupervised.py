@@ -12,6 +12,11 @@ import argparse
 from collections import OrderedDict
 import numpy as np
 import torch
+import sys
+
+sys.path.append('/kaggle/working/MUSE')
+sys.path.append('/kaggle/working/MUSE/src')
+sys.path.append('/kaggle/working/MUSE/src/evaluation')
 
 from src.utils import bool_flag, initialize_exp
 from src.models import build_model
