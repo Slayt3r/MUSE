@@ -16,6 +16,12 @@ import argparse
 import subprocess
 import numpy as np
 import torch
+import sys
+
+sys.path.append('/kaggle/working/MUSE')
+sys.path.append('/kaggle/working/MUSE/src')
+sys.path.append('/kaggle/working/MUSE/src/evaluation')
+
 from torch import optim
 from logging import getLogger
 
@@ -73,11 +79,11 @@ def load_fasttext_model(path):
     Load a binarized fastText model.
     """
     try:
-        import fastText
+        import fasttext
     except ImportError:
         raise Exception("Unable to import fastText. Please install fastText for Python: "
                         "https://github.com/facebookresearch/fastText")
-    return fastText.load_model(path)
+    return fasttext.load_model(path)
 
 
 def bow(sentences, word_vec, normalize=False):
