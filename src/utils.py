@@ -289,9 +289,10 @@ def read_txt_embeddings(params, source, full_vocab):
                 word, vect = line.rstrip().split(' ', 1)
                 if not full_vocab:
                     word = word.lower()
-                vect = np.fromstring(vect, sep=' ')
+                
+                vect = np.array(vect)
                 if np.linalg.norm(vect) == 0:  # avoid to have null embeddings
-                    print(vect)
+                    #print(vect)
                     vect = 0.01
                 if word in word2id:
                     if full_vocab:
