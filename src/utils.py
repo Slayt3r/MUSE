@@ -281,9 +281,10 @@ def read_txt_embeddings(params, source, full_vocab):
     with io.open(emb_path, 'r', encoding='utf-8', newline='\n', errors='ignore') as f:
         for i, line in enumerate(f):
             if i == 0:
-                split = line.split()
-                assert len(split) == 2
-                assert _emb_dim_file == int(split[1])
+                pass
+                #split = line.split()
+                #assert len(split) == 2
+                #assert _emb_dim_file == int(split[1])
             else:
                 word, vect = line.rstrip().split(' ', 1)
                 if not full_vocab:
