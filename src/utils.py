@@ -19,6 +19,7 @@ import torch
 import sys
 
 sys.path.append('/kaggle/working/MUSE')
+sys.path.append('/kaggle/working')
 sys.path.append('/kaggle/working/MUSE/src')
 sys.path.append('/kaggle/working/MUSE/src/evaluation')
 
