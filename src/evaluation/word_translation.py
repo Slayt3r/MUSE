@@ -58,6 +58,8 @@ def load_dictionary(path, word2id1, word2id2):
     not_found = 0
     not_found1 = 0
     not_found2 = 0
+    
+    print(str(path))
 
     with io.open(path, 'r', encoding='utf-8') as f:
         for index, line in enumerate(f):
