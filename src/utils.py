@@ -291,7 +291,8 @@ def read_txt_embeddings(params, source, full_vocab):
                     word = word.lower()
                 vect = np.fromstring(vect, sep=' ')
                 if np.linalg.norm(vect) == 0:  # avoid to have null embeddings
-                    vect[0] = 0.01
+                    print(vect)
+                    vect = 0.01
                 if word in word2id:
                     if full_vocab:
                         logger.warning("Word '%s' found twice in %s embedding file"
