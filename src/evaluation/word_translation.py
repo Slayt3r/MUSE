@@ -13,13 +13,14 @@ import torch
 import sys
 
 sys.path.append('/kaggle/working/MUSE')
+sys.path.append('/kaggle/working')
 sys.path.append('/kaggle/working/MUSE/src')
 sys.path.append('/kaggle/working/MUSE/src/evaluation')
 
 from ..utils import get_nn_avg_dist
 
 
-DIC_EVAL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'crosslingual', 'dictionaries')
+DIC_EVAL_PATH = '/kaggle/working/crosslingual' #os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'crosslingual', 'dictionaries')
 
 
 logger = getLogger()
