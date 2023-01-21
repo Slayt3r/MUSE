@@ -271,6 +271,16 @@ def read_txt_embeddings(params, source, full_vocab):
     """
     Reload pretrained embeddings from a text file.
     """
+    
+    import pickle
+
+    #Load the model
+    with open('/kaggle/working/content_embeddings.pickle', 'rb') as pkl:
+        content_embeddings = pickle.load(pkl)
+
+    with open('/kaggle/working/topics_embeddings.pickle', 'rb') as pkl:
+        topics_embeddings = pickle.load(pkl)
+    
     word2id = {}
     vectors = []
 
