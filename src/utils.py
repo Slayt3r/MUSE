@@ -290,7 +290,7 @@ def read_txt_embeddings(params, source, full_vocab):
                 if not full_vocab:
                     word = word.lower()
                 
-                vect = np.array(vect)
+                vect = np.array(vect).astype(np.float)
                 if np.linalg.norm(vect) == 0:  # avoid to have null embeddings
                     #print(vect)
                     vect = 0.01
