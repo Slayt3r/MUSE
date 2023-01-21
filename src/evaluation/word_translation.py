@@ -66,7 +66,11 @@ def load_dictionary(path, word2id1, word2id2):
             if len(parts) < 2:
                 logger.warning("Could not parse line %s (%i)", line, index)
                 continue
-            word1, word2 = parts
+                
+            #word1, word2 = parts #this was giving an error of too many values to unpack
+            word1 = ''.join([row[0] for row in parts])
+            word2 = ''.join([row[1] for row in parts])
+            
             if word1 in word2id1 and word2 in word2id2:
                 pairs.append((word1, word2))
             else:
